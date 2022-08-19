@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import * as RadioGroup from "@radix-ui/react-radio-group";
 import styled from "styled-components";
 
 export const Overlay = styled(Dialog.Overlay)((props) => {
@@ -75,7 +76,7 @@ export const CloseButton = styled(Dialog.Close)((props) => {
   };
 });
 
-export const TransactionType = styled.div((props) => {
+export const TransactionType = styled(RadioGroup.Root)((props) => {
   return {
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",
@@ -88,26 +89,40 @@ interface TransactionTypeButtonProps {
   variant: "income" | "outcome";
 }
 
-export const TransactionTypeButton = styled.button<TransactionTypeButtonProps>(
-  (props) => {
-    const { theme, variant } = props;
-    const svgColor =
-      variant === "income" ? theme["green-300"] : theme["red-300"];
+export const TransactionTypeButton = styled(
+  RadioGroup.Item
+)<TransactionTypeButtonProps>((props) => {
+  const { theme, variant } = props;
+  const svgColor = variant === "income" ? theme["green-300"] : theme["red-300"];
+  const dataStateRadio =
+    variant === "income" ? theme["green-500"] : theme["red-500"];
 
-    return {
-      background: theme["gray-700"],
-      padding: "1rem",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "0.5rem",
-      borderRadius: "6px",
-      border: 0,
-      color: theme["gray-300"],
+  return {
+    background: theme["gray-700"],
+    padding: "1rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "0.5rem",
+    borderRadius: "6px",
+    border: 0,
+    color: theme["gray-300"],
 
+    svg: {
+      color: svgColor,
+    },
+
+    "&[data-state='unchecked']:hover": {
+      transition: "background-color 0.2s",
+      background: theme["gray-600"],
+    },
+
+    "&[data-state='checked']": {
+      color: theme.white,
+      background: dataStateRadio,
       svg: {
-        color: svgColor,
+        color: theme.white,
       },
-    };
-  }
-);
+    },
+  };
+});

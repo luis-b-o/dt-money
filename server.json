@@ -1,0 +1,28 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 20000,
+      "createdAt": "2022-08-19T19:30:21.130Z"
+    },
+    {
+      "id": 2,
+      "description": "Café",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 30,
+      "createdAt": "2022-08-19T18:30:21.130Z"
+    },
+    {
+      "id": 3,
+      "description": "Salgado",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 10,
+      "createdAt": "2022-08-19T18:30:21.130Z"
+    }
+  ]
+}
