@@ -11,6 +11,7 @@ export const SearchFormContainer = styled.form((props) => {
       borderRadius: "6px",
       border: 0,
       background: theme["gray-900"],
+      color: theme["gray-300"],
       padding: "1rem",
 
       "&::placeholder": {
