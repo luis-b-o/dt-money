@@ -17,6 +17,8 @@
     "jsx": "react-jsx",
     "paths": {
       "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]
     },
