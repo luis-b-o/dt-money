@@ -19,6 +19,10 @@ export const GlobalStyle = createGlobalStyle((props) => {
       webkitFontSmoothing: "antialiased",
     },
 
+    button: {
+      cursor: "pointer",
+    },
+
     "body, input, textarea, button": {
       font: "400 1rem Roboto, sans-serif",
     },

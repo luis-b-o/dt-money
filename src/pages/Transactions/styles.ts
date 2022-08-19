@@ -16,7 +16,7 @@ export const TransactionsTable = styled.table((props) => {
     width: "100%",
     borderCollapse: "separate",
     borderSpacing: "0 0.5rem",
-    // marginTop: "1.5rem",
+    marginTop: "1.5rem",
 
     td: {
       padding: "1.25rem 2rem",
