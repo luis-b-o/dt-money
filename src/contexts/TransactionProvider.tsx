@@ -47,7 +47,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
       createdAt: new Date(),
     });
 
-    console.log(response);
     setTransactions((state) => [response.data, ...state]);
   }
 
