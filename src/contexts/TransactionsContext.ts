@@ -2,7 +2,7 @@ import {
   CreateTransactionInput,
   ITransaction,
 } from "@contexts/TransactionProvider";
-import { createContext } from "react";
+import { createContext } from "use-context-selector";
 
 interface TransactionsContextType {
   transactions: ITransaction[];

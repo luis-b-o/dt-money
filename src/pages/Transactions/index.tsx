@@ -7,10 +7,13 @@ import {
   TransactionsTable,
 } from "@pages/Transactions/styles";
 import { dateFormatter, priceFormatter } from "@utils/formater";
-import { useContext } from "react";
+import { useContextSelector } from "use-context-selector";
 
 export function Transactions() {
-  const { transactions } = useContext(TransactionsContext);
+  const transactions = useContextSelector(
+    TransactionsContext,
+    (context) => context.transactions
+  );
 
   return (
     <div>

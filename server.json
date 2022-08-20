@@ -79,6 +79,14 @@
       "type": "outcome",
       "createdAt": "2022-08-20T21:28:42.971Z",
       "id": 10
+    },
+    {
+      "description": "Festa",
+      "price": 65000,
+      "category": "Outros",
+      "type": "outcome",
+      "createdAt": "2022-08-20T22:01:47.916Z",
+      "id": 11
     }
   ]
 }
